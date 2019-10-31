@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+	<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+</head>
+<body>
+
+	<a-scene>
+		<!-- Assets -->
+		<a-assets antialias="true">
+			<!-- <a-asset-item id="someBullshit" src="assets/oneMoreTime.gltf"></a-asset-item>
+			<a-asset-item id="someBullshitmtl" src="assets/oneMoreTime.mtl"></a-asset-item> -->
+			<a-asset-item id="model6" src="assets/model6.gltf"></a-asset-item>
+
+			<!-- <a-asset-item id="the_gram" src="assets/theactuallasttry.obj"></a-asset-item> -->
+			<img id="orangeFilterTwo" src="assets/orange.png"></img>
+			<img id="o2b" src="assets/o2b.png"></img>
+			<img id="purple" src="assets/purp.png"></img>
+		</a-assets>
+
+		<!-- Objects -->
+		<a-entity gltf-model="assets/model6.gltf" scale="" position="-1.23365 0 -1.19" rotation="0 25 0"></a-entity>
+		<a-entity gltf-model="assets/model4.gltf" scale="30 30 30" position="-31.66757 0.01 -14.81442"></a-entity>
+		<a-entity gltf-model="assets/model.gltf" scale="1.5 1.5 1.5" position="-0.48349 0 -5.033"></a-entity>
+		<a-entity gltf-model="assets/model10.gltf" scale="8 8 8" position="2.07999 0 -9.278" rotation="0 -25 0.01"></a-entity>
+		<a-entity gltf-model="assets/model2.gltf" scale="4 4 4" rotation="0 25 0" position="-7.00105 0 -5.752"></a-entity>
+
+		<!-- The Gram -->
+		<!-- <a-entity gltf-model="assets/oneMoreTime.gltf" material="src: #someBullshitmtl" scale="0.78 0.75 0.5" position="-1 .5 -1.4"></a-entity> -->
+
+		<!-- Environment -->
+		<a-entity environment="preset: default"></a-entity>
+
+		<!-- Filters -->
+
+			<!-- Orange Filter -->
+			<!-- <a-entity id="orange" geometry="primitive: plane" position="-0.09626 1.80813 -1.5" scale="0 1.2 1.2" material="side: double; src: #orangeFilterTwo ; transparent: true; blending: additive"></a-entity>
+			<a-entity id="orangeButton" geometry="depth: 0.3; height: 0.580; width: 0.3" position="-0.10403 0.897 -1.338" material="color: #69d5bd"></a-entity> -->
+
+			<!-- Orange to Blue Filter -->
+			<!-- <a-entity id="otb" geometry="primitive: plane" position="-0.09626 1.80813 -1.5" scale="0 1.2 1.2" material="side: double; src: #o2b ; transparent: true; blending: additive"></a-entity> -->
+				<!-- otb Filter Button -->
+			<!-- <a-entity id="otbButton" geometry="depth: 0.3; height: 0.580; width: 0.3" position="-0.458 0.897 -1.338"></a-entity> -->
+
+			<!-- Purple Filter -->
+			<!-- <a-entity id="purp" geometry="primitive: plane" position="-0.09626 1.80813 -1.5" scale="0 1.2 1.2" material="side: double; src: #purple ; transparent: true; blending: additive"></a-entity> -->
+			<!-- <a-entity id="purpleButton" geometry="depth: 0.3; height: 0.58; width: 0.3" position="0.24403 0.897 -1.338"></a-entity> -->
+
+			<!-- Clear Filter -->
+			<!-- <a-entity id="clear" geometry="depth: 0.3; height: 0.58; width: 0.3" position="0.81548 0.897 -1.338"></a-entity> -->
+
+		<!-- Camera and Cursor -->
+		<a-entity camera look-controls position="0 .3 0">
+			<a-entity 	cursor="fuse: true; fuseTimeout: 500"
+            			position="0 0 -1"
+            			geometry="primitive:  ring;  radiusInner:  0.01;  radiusOuter:  0.02"
+            			material="color: white; shader: flat">
+		 	</a-entity>
+		</a-entity>
+	</a-scene>
+	<script>
+		var scene = document.querySelector('a-scene');
+		console.log(scene);
+
+		// Orange to Blue button controller
+		var otbButton = document.querySelector('#otbButton');
+		console.log(otbButton);
+		otbButton.addEventListener("click", function (){
+			console.log("Setting scale");
+			document.querySelector('#otb').setAttribute('scale',
+			{
+				x: 1.2,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#orange').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#purp').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+		});
+
+		// Orange button controller
+		var orangeButton = document.querySelector('#orangeButton');
+		console.log(orangeButton);
+		orangeButton.addEventListener("click", function (){
+			console.log("Setting scale");
+			document.querySelector('#orange').setAttribute('scale',
+			{
+				x: 1.2,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#otb').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#purp').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+		});
+
+		// Purple button controller
+		var purpleButton = document.querySelector('#purpleButton');
+		console.log(purpleButton);
+		purpleButton.addEventListener("click", function (){
+			console.log("Setting scale");
+			document.querySelector('#purp').setAttribute('scale',
+			{
+				x: 1.2,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#orange').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#otb').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+		});
+
+		var clear = document.querySelector('#clear');
+		console.log(purpleButton);
+		clear.addEventListener("click", function (){
+			console.log("Setting scale");
+			document.querySelector('#purp').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#orange').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+			document.querySelector('#otb').setAttribute('scale',
+			{
+				x: 0,
+				y: 1.2,
+				z: 1.2
+			});
+		});
+	</script>
+</body>
+</html>
