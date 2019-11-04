@@ -11,29 +11,24 @@
 	<a-scene>
 		<!-- Assets -->
 		<a-assets antialias="true">
-			<!-- <a-asset-item id="someBullshit" src="assets/oneMoreTime.gltf"></a-asset-item>
-			<a-asset-item id="someBullshitmtl" src="assets/oneMoreTime.mtl"></a-asset-item> -->
-			<a-asset-item id="model6" src="assets/model6.gltf"></a-asset-item>
-
-			<!-- <a-asset-item id="the_gram" src="assets/theactuallasttry.obj"></a-asset-item> -->
 		</a-assets>
 
 		<!-- Objects -->
-		<a-entity model class="model" gltf-model="assets/model6.gltf" scale="" position="-1.13323 0 -1.41624" rotation="" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model6.gltf" scale="" position="-1.13323 0 -1.41624" rotation="" shadow="cast: true; receive: true"></a-entity>
 
-		<a-entity model class="model" gltf-model="assets/model5.gltf" scale="" position="0.58084 0 -2.147" rotation="0 -59.99999999999999 0" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model5.gltf" scale="" position="0.58084 0 -2.147" rotation="0 -59.99999999999999 0" shadow="cast: true; receive: true"></a-entity>
 
-		<a-entity model class="model" gltf-model="assets/model9.gltf" scale="" position="2.08574 0 -1.048" rotation="0 -90 0" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model9.gltf" scale="" position="2.08574 0 -1.048" rotation="0 -90 0" shadow="cast: true; receive: true"></a-entity>
 
-		<a-entity model class="model" gltf-model="assets/model4.gltf" scale="" position="1.03005 0.01 2.251" rotation="0 -200 0" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model4.gltf" scale="" position="1.03005 0.01 2.251" rotation="0 -200 0" shadow="cast: true; receive: true"></a-entity>
 
-		<a-entity model class="model" gltf-model="assets/model3.gltf" scale="" position="1.69651 0.01 0.031" rotation="0 -130 0" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model3.gltf" scale="" position="1.69651 0.01 0.031" rotation="0 -130 0" shadow="cast: true; receive: true"></a-entity>
 
-		<a-entity model class="model" gltf-model="assets/model.gltf" scale="" position="-2.15229 0 1.508" rotation="0 90 0" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model.gltf" scale="" position="-2.15229 0 1.508" rotation="0 90 0" shadow="cast: true; receive: true"></a-entity>
 
-		<a-entity model class="model" gltf-model="assets/model10.gltf" scale="" position="-1.03288 0 1.418" rotation="0 -200 0.01" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model10.gltf" scale="" position="-1.03288 0 1.418" rotation="0 -200 0.01" shadow="cast: true; receive: true"></a-entity>
 
-		<a-entity model class="model" gltf-model="assets/model2.gltf" scale="" rotation="0 25 0" position="-2.08115 0 -0.721" shadow="cast: true; receive: true"></a-entity>
+		<a-entity model class="model" gltf-model="assets/Model2.gltf" scale="" rotation="0 25 0" position="-2.08115 0 -0.721" shadow="cast: true; receive: true"></a-entity>
 
 		<a-entity hello-world></a-entity>
 
@@ -53,110 +48,6 @@
 		 	</a-entity>
 		</a-entity>
 	</a-scene>
-	<script>
-		
-		// var scene = document.querySelector('a-scene');
-		// console.log(scene);
-
-		// // Orange to Blue button controller
-		// var otbButton = document.querySelector('#otbButton');
-		// console.log(otbButton);
-		// otbButton.addEventListener("click", function (){
-		// 	console.log("Setting scale");
-		// 	document.querySelector('#otb').setAttribute('scale',
-		// 	{
-		// 		x: 1.2,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#orange').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#purp').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// });
-
-		// // Orange button controller
-		// var orangeButton = document.querySelector('#orangeButton');
-		// console.log(orangeButton);
-		// orangeButton.addEventListener("click", function (){
-		// 	console.log("Setting scale");
-		// 	document.querySelector('#orange').setAttribute('scale',
-		// 	{
-		// 		x: 1.2,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#otb').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#purp').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// });
-
-		// // Purple button controller
-		// var purpleButton = document.querySelector('#purpleButton');
-		// console.log(purpleButton);
-		// purpleButton.addEventListener("click", function (){
-		// 	console.log("Setting scale");
-		// 	document.querySelector('#purp').setAttribute('scale',
-		// 	{
-		// 		x: 1.2,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#orange').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#otb').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// });
-
-		// var clear = document.querySelector('#clear');
-		// console.log(purpleButton);
-		// clear.addEventListener("click", function (){
-		// 	console.log("Setting scale");
-		// 	document.querySelector('#purp').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#orange').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// 	document.querySelector('#otb').setAttribute('scale',
-		// 	{
-		// 		x: 0,
-		// 		y: 1.2,
-		// 		z: 1.2
-		// 	});
-		// });
-	</script>
 	<script src="mainJS.js"></script>
 </body>
 </html>
