@@ -1,30 +1,30 @@
-console.log("JS Loaded");
+// console.log("JS Loaded");
 
-var tex = new THREE.TextureLoader().load('assets/whiteTexture.png');
-tex.flipY = false; // for glTF models.
-// console.log(tex);
+// var tex = new THREE.TextureLoader().load('assets/whiteTexture.png');
+// tex.flipY = false; // for glTF models.
+// // console.log(tex);
 
-var thisModel = document.getElementsByClassName('model');
-// console.log(thisModel);
+// var thisModel = document.getElementsByClassName('model');
+// // console.log(thisModel);
 
-for (i=0; i<thisModel.length; ++i) {
-    thisModel[i].addEventListener("loaded", plantTexture(), false);
-}
-
-function plantTexture(event) {
-    // console.log("Loaded a model !");
-    // console.log(event);
-//     event.detail.model.traverse(function(node){
-//         if (node.isMesh) node.material.map = tex;
-//     });
+// for (i=0; i<thisModel.length; ++i) {
+//     thisModel[i].addEventListener("loaded", plantTexture(), false);
 // }
 
-// thisTexture[i].addEventListener('model-loaded', function (e {
-//     e.detail.model.traverse(function(node) {
-//         if (node.isMesh) node.material.map = tex;
-//     });
-// });
-}
+// function plantTexture(event) {
+//     // console.log("Loaded a model !");
+//     // console.log(event);
+// //     event.detail.model.traverse(function(node){
+// //         if (node.isMesh) node.material.map = tex;
+// //     });
+// // }
+
+// // thisTexture[i].addEventListener('model-loaded', function (e {
+// //     e.detail.model.traverse(function(node) {
+// //         if (node.isMesh) node.material.map = tex;
+// //     });
+// // });
+// }
 
 // AFRAME.registerComponent('cube-env-map', {
 //     schema: {
@@ -85,7 +85,7 @@ AFRAME.registerComponent('model', {
             // console.log(node.material);
           if (node.isMesh) {
             // node.material.color = new THREE.Color(0xffffff);
-            node.material.color = new THREE.Color(50, 50, 50);
+            node.material.color = new THREE.Color(255, 255, 255);
             console.log(node.material.color);
             // node.material. = data;
             // node.material.transparent = data < 1.0;
