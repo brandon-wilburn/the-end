@@ -34,14 +34,14 @@
 		<a-entity hello-world></a-entity>
 
 		<!-- Environment -->
-		<a-entity environment="preset: default; lighting: none; ground: spikes; fog: 0.5; skyType: gradient"></a-entity>
+		<a-entity environment="preset: default; lighting: none; shadow: true; lightPosition: 5; ground: spikes; groundTexture: walkernoise; groundYScale: 500; fog: 1; skyType: gradient; horizonColor: red; dressing: apparatus; dressingAmount: 50"></a-entity>
 
-		<a-light light="color: #382210; type: point; castShadow: true" color="white" position="0 0 0">
+		<a-light light="color: #1b1b1b; type: point; castShadow: true; intensity: 0.10" color="white" position="0 3.319 0">
 			<a-entity id="target">
 		</a-light>
 
 		<!-- Camera and Cursor -->
-		<a-entity camera look-controls position="0 0 0">
+		<a-entity camera look-controls position="0 .5 0">
 			<a-entity 	cursor="fuse: true; fuseTimeout: 500"
             			position="0 0 -1"
             			geometry="primitive:  ring;  radiusInner:  0.01;  radiusOuter:  0.02"
@@ -52,5 +52,6 @@
 		
 
 	</a-scene>
+	<script src="spinJS.js"></script>
 </body>
 </html>
